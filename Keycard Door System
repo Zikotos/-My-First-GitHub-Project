@@ -1,0 +1,22 @@
+local requiredCard = "Level1Keycard"
+local door = script.Parent
+
+door.Touched:Connect(function(hit)
+	local character = hit.Parent
+	local player = game.Players:GetPlayerFromCharacter(character)
+
+	if player then
+		local backpack = player:FindFirstChild("Backpack")
+		local characterItems = character
+
+		if backpack:FindFirstChild(requiredCard) or characterItems:FindFirstChild(requiredCard) then
+			door.CanCollide = false
+			door.Transparency = 0.5
+
+			wait(3)
+
+			door.CanCollide = true
+			door.Transparency = 0
+		end
+	end
+end)
