@@ -1,0 +1,23 @@
+local red = script.Parent.Red
+local yellow = script.Parent.Yellow
+local green = script.Parent.Green
+
+while true do
+	-- Red
+	red.Material = Enum.Material.Neon
+	yellow.Material = Enum.Material.SmoothPlastic
+	green.Material = Enum.Material.SmoothPlastic
+	wait(5)
+
+	-- Yellow
+	red.Material = Enum.Material.SmoothPlastic
+	yellow.Material = Enum.Material.Neon
+	green.Material = Enum.Material.SmoothPlastic
+	wait(2)
+
+	-- Green
+	red.Material = Enum.Material.SmoothPlastic
+	yellow.Material = Enum.Material.SmoothPlastic
+	green.Material = Enum.Material.Neon
+	wait(5)
+end
